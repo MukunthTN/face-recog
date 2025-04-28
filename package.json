@@ -1,0 +1,12 @@
+{
+  "name": "face-recognition-app",
+  "version": "1.0.0",
+  "description": "Face Recognition System using TensorFlow.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+} 

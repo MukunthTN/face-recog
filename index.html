@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Face Recognition System</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+    <!-- BlazeFace for face detection -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface@0.0.5/dist/blazeface.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Face Recognition System</h1>
+        
+        <div class="video-container">
+            <video id="video" width="640" height="480" autoplay playsinline></video>
+            <canvas id="canvas" width="640" height="480"></canvas>
+            <div class="overlay">
+                <div class="face-count">Faces Detected: <span id="faceCount">0</span></div>
+                <div class="recognition-status" id="recognitionStatus"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn primary">Start Camera</button>
+            <button id="registerBtn" class="btn secondary" disabled>Register Face</button>
+            <button id="recognizeBtn" class="btn secondary" disabled>Recognize Face</button>
+        </div>
+
+        <div class="status-container">
+            <div class="status" id="status">Initializing...</div>
+            <div class="registered-faces">
+                <h3>Registered Faces</h3>
+                <ul id="registeredFacesList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
